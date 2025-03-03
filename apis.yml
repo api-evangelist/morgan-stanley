@@ -3,12 +3,12 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/morgan-stanley/refs/heads/main/apis.yml
 apis:
   - aid: morgan-stanley:morgan-stanley
-    name: Morgan Stanley
+    name: Morgan Stanley API
     tags:
       - API
-    humanURL: ' https://developer.morganstanley.com/'
+    humanURL: https://developer.morganstanley.com/
     properties:
-      - url: ' https://developer.morganstanley.com/'
+      - url: https://developer.morganstanley.com/
         type: Documentation
     description: >-
       Morgan Stanley invites you to explore our catalog of APIs as the basis of
