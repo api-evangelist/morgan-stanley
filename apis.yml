@@ -5,17 +5,24 @@ apis:
   - aid: morgan-stanley:morgan-stanley
     name: Morgan Stanley API
     tags:
-      - API
+      - Financial
+      - Wealth Management
+      - Investment Banking
     humanURL: https://developer.morganstanley.com/
     properties:
       - url: https://developer.morganstanley.com/
         type: Documentation
     description: >-
-      Morgan Stanley invites you to explore our catalog of APIs as the basis of
-      new innovative solutions. The Developer Portal allows you, our
-      institutional clients and third-party partners to leverage our APIs;
-      Increase the speed of data access and directly integrate our services into
-      your systems and processes. 
+      The Morgan Stanley API provides developers with a suite of tools and
+      resources to easily integrate their systems with Morgan Stanley's
+      financial services and products. This API allows for seamless
+      communication between third-party applications and Morgan Stanley's core
+      systems, enabling clients to access real-time market data, manage their
+      investment portfolios, execute trades, and perform various other financial
+      transactions. By leveraging the Morgan Stanley API, developers can create
+      custom solutions that streamline and enhance the overall user experience,
+      ultimately empowering clients to make more informed decisions and achieve
+      their financial goals.
 name: Morgan Stanley
 tags:
   - Financial
