@@ -6,8 +6,8 @@ apis:
     name: Morgan Stanley API
     tags:
       - Financial
-      - Wealth Management
       - Investment Banking
+      - Wealth Management
     humanURL: https://developer.morganstanley.com/
     properties:
       - url: https://developer.morganstanley.com/
@@ -22,8 +22,8 @@ apis:
 name: Morgan Stanley
 tags:
   - Financial
-  - Wealth Management
   - Investment Banking
+  - Wealth Management
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
