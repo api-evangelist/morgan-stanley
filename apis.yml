@@ -2,6 +2,8 @@ aid: morgan-stanley
 url: >-
   https://raw.githubusercontent.com/api-evangelist/morgan-stanley/refs/heads/main/apis.yml
 common:
+  - type: DomainSecurity
+    url: security/morgan-stanley-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/morganstanley
   - type: LinkedIn
