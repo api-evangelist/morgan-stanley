@@ -1,0 +1,35 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.etrade.com/getting-started
+standards:
+  - id: oauth1a
+    conforms: true
+    evidence: E*TRADE brokerage API uses three-legged OAuth 1.0a with HMAC-SHA1 signatures.
+  - id: oauth2-client-credentials
+    conforms: true
+    evidence: >-
+      Morgan Stanley institutional API Platform uses OAuth 2.0 confidential-client
+      credentials (certificate-based) against Microsoft Entra / Azure AD.
+  - id: openid-connect
+    conforms: true
+    evidence: >-
+      Institutional platform authenticates via Microsoft Entra / Azure AD, an
+      OIDC-compliant identity provider.
+  - id: openapi
+    conforms: true
+    evidence: >-
+      Morgan Stanley states its institutional REST APIs are built to the OpenAPI
+      Specification following the Microsoft API Guidelines (specs are gated).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      E*TRADE uses a numeric code+message Error envelope, not
+      application/problem+json.
+  - id: rest-json
+    conforms: true
+    evidence: E*TRADE V1 is a REST API supporting JSON and XML representations.
+notes: >-
+  No public certification/compliance program (SOC 2, ISO 27001, PCI DSS) is
+  published on the developer surface, so no Compliance pointer is emitted.
+  Morgan Stanley entities appear in UK/EU Open Banking / PSD2 ASPSP registries as
+  a regulatory registration rather than a public developer product.

@@ -1,0 +1,28 @@
+generated: '2026-07-23'
+method: searched
+source: https://github.com/morganstanley/api
+scope: >-
+  Registry search (npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems,
+  Packagist, crates.io) found NO published first-party client SDK for either the
+  E*TRADE API or the Morgan Stanley institutional API Platform. Morgan Stanley
+  ships first-party SAMPLE projects (source code, not installable packages) in
+  the official morganstanley/api repository. No `SDKs` pointer is emitted because
+  there is no installable client library.
+packages: []
+sample_projects:
+  - name: Morgan Stanley API Samples
+    repo: https://github.com/morganstanley/api
+    license: Apache-2.0
+    official: true
+    installable: false
+    languages: [Java, Python, C#/.NET]
+    surfaces: [REST, WebSocket]
+    note: >-
+      Starter projects for connecting to Morgan Stanley APIs. Java and Python
+      cover both REST and WebSocket; .NET covers REST only. Auth samples use the
+      MSAL library with a certificate for the OAuth 2.0 token exchange. No
+      OpenAPI specs and no published package artifacts (GitHub "Packages 0").
+notes: >-
+  E*TRADE has a rich ECOSYSTEM of third-party client libraries (e.g. pyetrade on
+  PyPI), but none are first-party Morgan Stanley / E*TRADE packages, so they are
+  not catalogued here as official.

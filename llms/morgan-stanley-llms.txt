@@ -1,0 +1,41 @@
+# Morgan Stanley
+
+> Morgan Stanley is a global financial services firm. Its public developer surface is split between an invitation-only institutional API Platform at developer.morganstanley.com (OAuth 2.0 with certificate-based token exchange, REST + WebSocket, built to the OpenAPI Specification) and the genuinely public E*TRADE from Morgan Stanley retail-brokerage API at developer.etrade.com (OAuth 1.0a, REST, with a full sandbox at apisb.etrade.com).
+
+## APIs
+
+- [Morgan Stanley API Platform (REST)](https://developer.morganstanley.com/apis): Invitation-only institutional REST APIs; OAuth 2.0 confidential-client credentials via Microsoft Entra / Azure AD (certificate-based). Specs are gated behind onboarding.
+- [Morgan Stanley API Platform (WebSocket Streaming)](https://developer.morganstanley.com/): Low-latency event-driven feeds for onboarded institutional clients; same OAuth 2.0 security model.
+- [E*TRADE - Accounts API](https://developer.etrade.com/): Account list, balances, portfolio positions, transactions. base https://api.etrade.com/v1/accounts
+- [E*TRADE - Market Data API](https://developer.etrade.com/): Real-time/delayed equity + option quotes, option chains, product/symbol lookup. base https://api.etrade.com/v1/market
+- [E*TRADE - Order API](https://developer.etrade.com/): List, preview, place, change, cancel equity/option orders. base https://api.etrade.com/v1/accounts
+- [E*TRADE - Alerts API](https://developer.etrade.com/): List, read, and delete account alerts. base https://api.etrade.com/v1/user/alerts
+
+## Authentication
+
+- [E*TRADE OAuth 1.0a](https://apisb.etrade.com/docs/api/authorization/request_token.html): 3-legged OAuth 1.0a, HMAC-SHA1. request_token -> authorize -> access_token, with renew and revoke.
+- [Morgan Stanley Platform OAuth 2.0](https://github.com/morganstanley/api): Certificate-based confidential-client credentials via Microsoft Entra / Azure AD (MSAL).
+- Auth profile: authentication/morgan-stanley-authentication.yml
+
+## Conventions & Errors
+
+- Conventions (versioning v1, idempotency via clientOrderId, marker/count pagination, JSON+XML): conventions/morgan-stanley-conventions.yml
+- Error codes (E*TRADE numeric code+message envelope): errors/morgan-stanley-etrade-error-codes.yml
+- Sandbox (apisb.etrade.com): sandbox/morgan-stanley-sandbox.yml
+- Lifecycle (versioning v1): lifecycle/morgan-stanley-lifecycle.yml
+
+## Docs
+
+- [E*TRADE Getting Started](https://developer.etrade.com/getting-started)
+- [E*TRADE Developer Guides](https://developer.etrade.com/getting-started/developer-guides)
+- [Morgan Stanley Developer Portal](https://developer.morganstanley.com/)
+- [Morgan Stanley API Terms](https://developer.morganstanley.com/terms)
+
+## Code
+
+- [Morgan Stanley API Samples (Java/Python/.NET, REST+WebSocket)](https://github.com/morganstanley/api)
+- [Morgan Stanley GitHub Organization](https://github.com/morganstanley)
+
+## Security
+
+- [Vulnerability Disclosure](https://www.morganstanley.com/vulnerability-disclosure)

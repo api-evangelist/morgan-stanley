@@ -1,0 +1,68 @@
+generated: '2026-07-23'
+method: searched
+source: https://apisb.etrade.com/docs/api/authorization/request_token.html
+docs:
+  - https://developer.etrade.com/getting-started
+  - https://apisb.etrade.com/docs/api/authorization/request_token.html
+  - https://github.com/morganstanley/api
+summary:
+  types: [oauth1, oauth2]
+  api_key_in: []
+  oauth2_flows: [clientCredentials]
+  note: >-
+    Two distinct auth models. The public E*TRADE brokerage API uses three-legged
+    OAuth 1.0a (HMAC-SHA1) on behalf of an account holder. The invitation-only
+    Morgan Stanley institutional API Platform uses OAuth 2.0 confidential-client
+    credentials against Microsoft Entra / Azure AD with certificate-based token
+    exchange (no client secret; a self-signed key pair + certificate thumbprint
+    via the MSAL library). No apiKey/bearer static-key surface is published.
+schemes:
+  - name: etrade-oauth1
+    surface: E*TRADE from Morgan Stanley (Accounts, Market Data, Order, Alerts)
+    type: oauth1
+    version: 1.0a
+    signature_method: HMAC-SHA1
+    legs: 3
+    flow:
+      - step: request_token
+        method: GET
+        url: https://api.etrade.com/oauth/request_token
+        sandbox_url: https://apisb.etrade.com/oauth/request_token
+        note: >-
+          Temporary request token, expires after 5 minutes. Requires
+          oauth_consumer_key, oauth_timestamp (epoch, within 5 min), oauth_nonce,
+          oauth_signature_method=HMAC-SHA1, oauth_signature, oauth_callback=oob.
+      - step: authorize
+        method: GET
+        url: https://us.etrade.com/e/t/etws/authorize
+        note: User authorizes the application and receives a verification code.
+      - step: access_token
+        method: GET
+        url: https://api.etrade.com/oauth/access_token
+        sandbox_url: https://apisb.etrade.com/oauth/access_token
+        note: Exchanges the authorized request token + verifier for an access token/secret.
+      - step: renew_access_token
+        method: GET
+        url: https://api.etrade.com/oauth/renew_access_token
+        note: Reactivates an access token that has become inactive (2h idle timeout).
+      - step: revoke_access_token
+        method: GET
+        url: https://api.etrade.com/oauth/revoke_access_token
+        note: Invalidates the access token.
+    token_lifetime: >-
+      Access token is invalidated at midnight US Eastern and becomes inactive after
+      2 hours of inactivity (renewable via renew_access_token).
+    consumer_key: Per-application consumer key + secret; separate keys for sandbox vs production.
+    sources: [https://apisb.etrade.com/docs/api/authorization/request_token.html]
+  - name: morgan-stanley-platform-oauth2
+    surface: Morgan Stanley API Platform (institutional REST + WebSocket)
+    type: oauth2
+    flow: clientCredentials
+    identity_provider: Microsoft Entra / Azure AD (confidential client)
+    credential: >-
+      Certificate-based confidential-client authentication - client id, tenant,
+      scopes, certificate thumbprint, and a self-signed private key (no shared
+      client secret). Tokens acquired via the MSAL library.
+    scopes: Provisioned per client during onboarding; not published publicly.
+    gated: true
+    sources: [https://github.com/morganstanley/api]

@@ -1,0 +1,30 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.etrade.com/getting-started
+scope: >-
+  Lifecycle posture across the two Morgan Stanley developer surfaces. The public
+  E*TRADE V1 REST API is versioned in the URI path; the invitation-only Morgan
+  Stanley institutional platform follows the Microsoft API Guidelines but its
+  deprecation/SLA specifics are gated behind onboarding.
+versioning:
+  scheme: uri-path
+  current: v1
+  detail: E*TRADE resources are served under /v1 on api.etrade.com and apisb.etrade.com.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: >-
+    No public RFC 8594 Sunset/Deprecation header policy documented on the E*TRADE
+    surface. Institutional deprecation is handled per client agreement.
+sla:
+  url: null
+  uptime_target: null
+  detail: No public SLA for the developer APIs; institutional SLAs are contractual.
+status_page: null
+status_page_note: >-
+  No dedicated developer status page was found for developer.etrade.com or
+  developer.morganstanley.com. E*TRADE publishes general system status through
+  us.etrade.com, not an API-specific status feed.
+maintenance: >-
+  E*TRADE documents scheduled system-maintenance windows via error code 670
+  (HTTP 500, "Service unavailable / system maintenance").

@@ -1,0 +1,29 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.etrade.com/getting-started
+scope: >-
+  The public E*TRADE from Morgan Stanley developer platform ships a full sandbox.
+  The invitation-only Morgan Stanley institutional API Platform provisions
+  per-client sandbox endpoints during onboarding (not publicly documented).
+sandbox:
+  provider: E*TRADE from Morgan Stanley
+  host: https://apisb.etrade.com/v1
+  production_host: https://api.etrade.com/v1
+  separation: >-
+    Live and sandbox are separated by host AND by credentials - the sandbox
+    requires its own OAuth consumer key + secret, distinct from production keys.
+    Sandbox OAuth endpoints live under apisb.etrade.com/oauth.
+  behavior: >-
+    The sandbox lets developers exercise the REST API and validate request/response
+    syntax, sample responses, and deserialization logic WITHOUT executing real
+    transactions in live markets. Responses are canned sample data keyed to the
+    request shape rather than live account/market values.
+  oauth:
+    request_token: https://apisb.etrade.com/oauth/request_token
+    access_token: https://apisb.etrade.com/oauth/access_token
+  covers: [Accounts, Market Data, Order, Alerts]
+  caveats: >-
+    Sandbox returns representative/sample payloads; values are not live and order
+    placement is simulated. Real trading requires production keys and account
+    entitlements.
+notes: Never invent test values - E*TRADE sandbox returns server-side canned data, not fixed magic tokens.

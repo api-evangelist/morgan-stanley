@@ -229,8 +229,32 @@ common:
     url: https://www.linkedin.com/company/morgan-stanley
   - type: Blog
     url: https://morganstanley.github.io/
+  - type: GettingStarted
+    url: https://developer.etrade.com/getting-started
   - type: DomainSecurity
     url: security/morgan-stanley-domain-security.yml
+  - type: VulnerabilityDisclosure
+    url: security/morgan-stanley-vulnerability-disclosure.yml
+  - type: Security
+    url: https://www.morganstanley.com/vulnerability-disclosure
+  - type: Authentication
+    url: authentication/morgan-stanley-authentication.yml
+  - type: Conventions
+    url: conventions/morgan-stanley-conventions.yml
+  - type: Idempotency
+    url: conventions/morgan-stanley-conventions.yml
+  - type: ErrorCatalog
+    url: errors/morgan-stanley-etrade-error-codes.yml
+  - type: Sandbox
+    url: sandbox/morgan-stanley-sandbox.yml
+  - type: Lifecycle
+    url: lifecycle/morgan-stanley-lifecycle.yml
+  - type: Conformance
+    url: conformance/morgan-stanley-conformance.yml
+  - type: Packages
+    url: packages/morgan-stanley-packages.yml
+  - type: LLMsTxt
+    url: llms/morgan-stanley-llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

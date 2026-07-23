@@ -1,0 +1,46 @@
+generated: '2026-07-23'
+method: searched
+source: https://apisb.etrade.com/docs/api/order/api-order-v1.html
+format: etrade-numeric
+scope: >-
+  E*TRADE from Morgan Stanley V1 REST API returns a numeric error `code` plus a
+  `message` string in an Error envelope (distinct from the HTTP status). This is
+  a representative sample harvested from the public E*TRADE API documentation;
+  the full registry lives in the in-portal Swagger reference. The invitation-only
+  Morgan Stanley institutional platform does not publish a public error registry.
+envelope:
+  fields: [code, message]
+  note: Numeric `code` is E*TRADE-specific; `message` is human-readable.
+error_codes:
+  - code: 100
+    http: 400
+    area: order/account
+    message: Account key does not belong to user.
+  - code: 102
+    http: 400
+    area: order/account
+    message: Please enter valid account key.
+  - code: 105
+    http: 204
+    area: account
+    message: No records available.
+  - code: 670
+    http: 500
+    area: account
+    message: Service unavailable / system maintenance.
+  - code: 1021
+    http: 400
+    area: order
+    message: We cannot accept this order because there are insufficient funds.
+  - code: 1026
+    http: 200
+    area: order
+    message: Your order was successfully entered during market hours.
+  - code: 1027
+    http: 200
+    area: order
+    message: The market was closed when we received your order.
+notes: >-
+  Some order codes (1026, 1027) are returned with HTTP 200 as informational
+  acknowledgements rather than failures. Consult the in-portal Swagger reference
+  for the complete code registry per module (Accounts, Market Data, Order, Alerts).
