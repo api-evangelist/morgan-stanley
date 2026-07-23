@@ -1,49 +1,236 @@
 aid: morgan-stanley
 url: >-
   https://raw.githubusercontent.com/api-evangelist/morgan-stanley/refs/heads/main/apis.yml
-common:
-  - type: DomainSecurity
-    url: security/morgan-stanley-domain-security.yml
-  - type: GitHubOrganization
-    url: https://github.com/morganstanley
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/morgan-stanley
-apis:
-  - aid: morgan-stanley:morgan-stanley
-    name: Morgan Stanley API
-    tags:
-      - Financial
-      - Investment Banking
-      - Wealth Management
-    humanURL: https://developer.morganstanley.com/
-    properties:
-      - url: https://developer.morganstanley.com/
-        type: Documentation
-    description: >-
-      The Morgan Stanley API provides developers with a suite of tools and resources
-      to easily integrate their systems with Morgan Stanley's financial services and
-      products. This API allows for seamless communication between third-party applications
-      and Morgan Stanley's core systems, enabling clients to access real-time market
-      data, manage their investment portfolios, execute trades, and perform various
-      other financial transactions.
 name: Morgan Stanley
-tags:
-  - Financial
-  - Investment Banking
-  - Wealth Management
-  - Fortune 100
-type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-access: 3rd-Party
-created: '2025-03-01'
-modified: '2026-04-28'
-position: Consumer
+kind: company
 description: >-
   Morgan Stanley is a global financial services firm that offers a wide range of services
   to individuals, corporations, and governments. The firm is known for its investment
   banking and wealth management services, helping clients raise capital, make strategic
   acquisitions, and manage their assets. Morgan Stanley also provides services in
-  areas such as asset management, trading, research, and risk management.
+  areas such as asset management, trading, research, and risk management. Its public
+  developer surface is split between an invitation-only institutional API Platform at
+  developer.morganstanley.com (OAuth 2.0 with certificate-based token exchange, REST and
+  WebSocket, built to the OpenAPI Specification) and the genuinely public E*TRADE from
+  Morgan Stanley brokerage API at developer.etrade.com (OAuth 1.0a, REST, with a sandbox).
+accessModel:
+  pricing: unknown
+  onboarding: sales
+  trial: false
+  try_now: false
+  public: false
+  label: Invitation-only institutional platform + public E*TRADE brokerage API
+  confidence: medium
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-23'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/morgan-stanley.png
+tags:
+  - Financial
+  - Investment Banking
+  - Wealth Management
+  - Brokerage
+  - Market Data
+  - Trading
+  - Fortune 100
+  - United States
+type: Index
+access: 3rd-Party
+created: '2025-03-01'
+modified: '2026-07-23'
+position: Consumer
+apis:
+  - aid: morgan-stanley:api-platform-rest
+    name: Morgan Stanley API Platform (REST)
+    humanURL: https://developer.morganstanley.com/apis
+    tags:
+      - Financial
+      - Institutional
+      - REST
+      - OpenAPI
+      - OAuth2
+      - United States
+    properties:
+      - type: Documentation
+        url: https://developer.morganstanley.com/apis
+      - type: DeveloperPortal
+        url: https://developer.morganstanley.com/
+      - type: SampleCode
+        url: https://github.com/morganstanley/api
+      - type: TermsOfService
+        url: https://developer.morganstanley.com/terms
+    description: >-
+      The institutional REST APIs on the Morgan Stanley API Platform let onboarded clients
+      and third-party partners integrate Morgan Stanley data and services directly into
+      their own systems and processes. The REST APIs are built to the OpenAPI Specification
+      and follow the Microsoft API Guidelines, supporting tooling and code generation in
+      all major languages. Access is by invitation only: developers must contact their
+      Morgan Stanley representative to be onboarded, after which they can browse technical
+      specifications, try APIs interactively in the portal, and acquire keys. APIs are
+      secured with OAuth 2.0 using strong certificate-based exchange (Microsoft Entra /
+      Azure AD confidential client credentials with a self-signed key pair and certificate
+      thumbprint, via the MSAL library). OpenAPI documents are published inside the
+      authenticated portal and are not publicly downloadable.
+  - aid: morgan-stanley:api-platform-websocket
+    name: Morgan Stanley API Platform (WebSocket Streaming)
+    humanURL: https://developer.morganstanley.com/
+    tags:
+      - Financial
+      - Institutional
+      - WebSocket
+      - Streaming
+      - OAuth2
+      - United States
+    properties:
+      - type: Documentation
+        url: https://developer.morganstanley.com/
+      - type: DeveloperPortal
+        url: https://developer.morganstanley.com/
+      - type: SampleCode
+        url: https://github.com/morganstanley/api
+    description: >-
+      Alongside its REST APIs, the Morgan Stanley API Platform exposes streaming WebSocket
+      APIs for onboarded institutional clients who need low-latency, event-driven data
+      feeds rather than request/response polling. The public morganstanley/api GitHub
+      repository ships Java and Python starter projects specifically for the WebSocket
+      APIs, connecting over a wss:// endpoint using the same security model as the REST
+      APIs: OAuth 2.0 access tokens obtained from Microsoft Entra / Azure AD via
+      certificate-based confidential-client authentication (client id, scopes, certificate
+      thumbprint, and private key). As with the REST surface, the specific endpoints,
+      scopes, and message schemas are provisioned per client during onboarding and are not
+      published publicly; access requires contacting a Morgan Stanley representative.
+  - aid: morgan-stanley:etrade-accounts
+    name: E*TRADE from Morgan Stanley - Accounts API
+    humanURL: https://developer.etrade.com/
+    baseURL: https://api.etrade.com/v1/accounts
+    tags:
+      - Brokerage
+      - Accounts
+      - Portfolio
+      - REST
+      - OAuth1
+      - United States
+    properties:
+      - type: Documentation
+        url: https://developer.etrade.com/getting-started
+      - type: DeveloperPortal
+        url: https://developer.etrade.com/
+      - type: TermsOfService
+        url: https://us.etrade.com/l/f/agreement-library/api-developer-licensing-agreement
+    description: >-
+      E*TRADE from Morgan Stanley operates a genuinely public, self-service developer
+      platform whose REST Accounts API gives an authenticated E*TRADE user's authorized
+      application access to detailed account information: the account list, cash and
+      margin balances, portfolio positions, and transaction history. It is a versioned
+      (V1) REST API documented with Swagger inside the portal, authenticated with OAuth
+      1.0a (request token, user authorization, access token, renewal, and revocation),
+      and backed by a full sandbox environment (apisb.etrade.com) for testing before
+      hitting the production host (api.etrade.com). This is the retail-brokerage arm of
+      the Morgan Stanley umbrella and, unlike the institutional API Platform, its docs and
+      sandbox are openly reachable to any developer who registers for a consumer/sandbox key.
+  - aid: morgan-stanley:etrade-market-data
+    name: E*TRADE from Morgan Stanley - Market Data API
+    humanURL: https://developer.etrade.com/
+    baseURL: https://api.etrade.com/v1/market
+    tags:
+      - Brokerage
+      - Market Data
+      - Quotes
+      - Options
+      - REST
+      - United States
+    properties:
+      - type: Documentation
+        url: https://developer.etrade.com/getting-started
+      - type: DeveloperPortal
+        url: https://developer.etrade.com/
+    description: >-
+      The E*TRADE from Morgan Stanley Market Data API is the market-data module of the
+      public E*TRADE V1 REST platform. It provides real-time and delayed equity and
+      option quotes, option chains, and product/symbol lookup so applications can price
+      instruments, research securities, and build watchlists and analytics. Like the rest
+      of the E*TRADE surface it is authenticated with OAuth 1.0a on behalf of an E*TRADE
+      account holder, documented with in-portal Swagger, and exercisable against the
+      apisb.etrade.com sandbox before the api.etrade.com production host. Market-data
+      access is subject to the E*TRADE API Developer Licensing Agreement and exchange
+      entitlement rules. This is a public developer surface within the Morgan Stanley group.
+  - aid: morgan-stanley:etrade-orders
+    name: E*TRADE from Morgan Stanley - Order API
+    humanURL: https://developer.etrade.com/
+    baseURL: https://api.etrade.com/v1/accounts
+    tags:
+      - Brokerage
+      - Trading
+      - Orders
+      - REST
+      - OAuth1
+      - United States
+    properties:
+      - type: Documentation
+        url: https://developer.etrade.com/getting-started
+      - type: DeveloperPortal
+        url: https://developer.etrade.com/
+      - type: TermsOfService
+        url: https://us.etrade.com/l/f/agreement-library/api-developer-licensing-agreement
+    description: >-
+      The E*TRADE from Morgan Stanley Order API is the trading module of the public
+      E*TRADE V1 REST platform, letting an authorized application list an account's
+      orders and preview, place, change, and cancel equity and option orders on behalf of
+      the authenticated E*TRADE user. Because it moves real money, it is gated by OAuth
+      1.0a user authorization plus the E*TRADE API Developer Licensing Agreement, and
+      E*TRADE provides a sandbox (apisb.etrade.com) so developers can validate order
+      request/response syntax, sample responses, and deserialization logic without
+      executing live trades before switching to the api.etrade.com production host. It is
+      the retail order-management arm of the Morgan Stanley umbrella and is openly
+      documented to registered developers.
+  - aid: morgan-stanley:etrade-alerts
+    name: E*TRADE from Morgan Stanley - Alerts API
+    humanURL: https://developer.etrade.com/
+    baseURL: https://api.etrade.com/v1/user/alerts
+    tags:
+      - Brokerage
+      - Alerts
+      - Notifications
+      - REST
+      - OAuth1
+      - United States
+    properties:
+      - type: Documentation
+        url: https://developer.etrade.com/getting-started
+      - type: DeveloperPortal
+        url: https://developer.etrade.com/
+    description: >-
+      The E*TRADE from Morgan Stanley Alerts API is the notifications module of the public
+      E*TRADE V1 REST platform. It lets an authorized application list the alerts E*TRADE
+      has generated for the authenticated account holder, read the details of an
+      individual alert, and delete alerts, so integrations can surface account, order, and
+      market notifications inside their own experiences. It shares the platform's OAuth
+      1.0a user-authorization model, in-portal Swagger documentation, and the
+      apisb.etrade.com sandbox for testing against sample data before using the
+      api.etrade.com production host. As part of the retail E*TRADE brokerage within the
+      Morgan Stanley group, its documentation is openly available to registered developers
+      under the E*TRADE API Developer Licensing Agreement.
+common:
+  - type: Website
+    url: https://www.morganstanley.com/
+  - type: DeveloperPortal
+    url: https://developer.morganstanley.com/
+  - type: Documentation
+    url: https://developer.morganstanley.com/apis
+  - type: TermsOfService
+    url: https://developer.morganstanley.com/terms
+  - type: SampleCode
+    url: https://github.com/morganstanley/api
+  - type: GitHubOrganization
+    url: https://github.com/morganstanley
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/morgan-stanley
+  - type: Blog
+    url: https://morganstanley.github.io/
+  - type: DomainSecurity
+    url: security/morgan-stanley-domain-security.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
