@@ -61,6 +61,13 @@ apis:
       - Institutional
       - REST
       - OpenAPI
+      - Authentication
+      - United States
+    tags_raw:
+      - Financial
+      - Institutional
+      - REST
+      - OpenAPI
       - OAuth2
       - United States
     properties:
@@ -92,6 +99,13 @@ apis:
       - Institutional
       - WebSocket
       - Streaming
+      - Authentication
+      - United States
+    tags_raw:
+      - Financial
+      - Institutional
+      - WebSocket
+      - Streaming
       - OAuth2
       - United States
     properties:
@@ -117,6 +131,13 @@ apis:
     humanURL: https://developer.etrade.com/
     baseURL: https://api.etrade.com/v1/accounts
     tags:
+      - Brokerage
+      - Account
+      - Portfolio
+      - REST
+      - OAuth1
+      - United States
+    tags_raw:
       - Brokerage
       - Accounts
       - Portfolio
@@ -174,6 +195,13 @@ apis:
     tags:
       - Brokerage
       - Trading
+      - Order
+      - REST
+      - OAuth1
+      - United States
+    tags_raw:
+      - Brokerage
+      - Trading
       - Orders
       - REST
       - OAuth1
@@ -201,6 +229,13 @@ apis:
     humanURL: https://developer.etrade.com/
     baseURL: https://api.etrade.com/v1/user/alerts
     tags:
+      - Brokerage
+      - Alerts
+      - Notification
+      - REST
+      - OAuth1
+      - United States
+    tags_raw:
       - Brokerage
       - Alerts
       - Notifications
