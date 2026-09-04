@@ -51,7 +51,7 @@ type: Index
 access: 3rd-Party
 created: '2025-03-01'
 modified: '2026-07-23'
-position: Consumer
+position: Consuming
 apis:
   - aid: morgan-stanley:api-platform-rest
     name: Morgan Stanley API Platform (REST)
