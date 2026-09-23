@@ -1,7 +1,9 @@
 ---
 title: Morgan Stanley uses AI evals to shape the future of ...
 url: https://openai.com/index/morgan-stanley/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Morgan Stanley" press release artificial intelligence'
 position: 4
 source: serpapi-google

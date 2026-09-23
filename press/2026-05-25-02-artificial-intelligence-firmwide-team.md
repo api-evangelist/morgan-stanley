@@ -1,7 +1,9 @@
 ---
 title: 'Artificial Intelligence: Firmwide Team'
 url: https://www.morganstanley.com/about-us/technology/artificial-intelligence-firmwide-team
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Morgan Stanley" press release artificial intelligence'
 position: 2
 source: serpapi-google

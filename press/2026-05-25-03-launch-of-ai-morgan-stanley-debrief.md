@@ -1,7 +1,9 @@
 ---
 title: Launch of AI @ Morgan Stanley Debrief
 url: https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Morgan Stanley" press release artificial intelligence'
 position: 3
 source: serpapi-google
