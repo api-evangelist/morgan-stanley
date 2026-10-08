@@ -268,6 +268,12 @@ apis:
       Morgan Stanley group, its documentation is openly available to registered developers
       under the E*TRADE API Developer Licensing Agreement.
 common:
+  - type: Plans
+    url: plans/morgan-stanley-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/morgan-stanley-rate-limits.yml
+  - type: FinOps
+    url: finops/morgan-stanley-finops.yml
   - type: Website
     url: https://www.morganstanley.com/
   - type: DeveloperPortal
