@@ -1,0 +1,128 @@
+edges:
+- partner_name: ISO 10383 (MIC)
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+  source: mic
+  category: registered trading venues and market segments
+  contract_reference:
+    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
+    spec_file: null
+    standard: ISO 10383
+    role: venue operator
+    matched_domain: morganstanley.com
+    matched_by: domain+verified:morganstanley.com
+    categories:
+    - ATSS
+    - NSPD
+    - OTHR
+    - SINT
+    operating_mics:
+    - MSAL
+    - MSBI
+    - MSCO
+    - MSEU
+    - MSIP
+    mics:
+    - mic: MBSI
+      operating_mic: MSBI
+      segment: SGMT
+      market: MORGAN STANLEY BANK INTERNATIONAL LIMITED - SYSTEMATIC INTERNALISER
+      category: SINT
+      legal_name: ''
+      country: GB
+    - mic: MSBI
+      operating_mic: MSBI
+      segment: OPRT
+      market: MORGAN STANLEY BANK INTERNATIONAL LIMITED
+      category: NSPD
+      legal_name: ''
+      country: GB
+    - mic: MESI
+      operating_mic: MSEU
+      segment: SGMT
+      market: MORGAN STANLEY EUROPE S.E. - SYSTEMATIC INTERNALISER
+      category: SINT
+      legal_name: MORGAN STANLEY EUROPE SE
+      country: DE
+    - mic: MSEU
+      operating_mic: MSEU
+      segment: OPRT
+      market: MORGAN STANLEY EUROPE S.E.
+      category: NSPD
+      legal_name: MORGAN STANLEY EUROPE SE
+      country: DE
+    - mic: MSRP
+      operating_mic: MSCO
+      segment: SGMT
+      market: MS RPOOL
+      category: ATSS
+      legal_name: MORGAN STANLEY AND CO. LLC
+      country: US
+    - mic: MSSI
+      operating_mic: MSIP
+      segment: SGMT
+      market: MORGAN STANLEY AND CO. INTERNATIONAL PLC - SYSTEMATIC INTERNALISER
+      category: SINT
+      legal_name: ''
+      country: GB
+    - mic: MSAL
+      operating_mic: MSAL
+      segment: OPRT
+      market: MORGAN STANLEY AUSTRALIA SECURITIES LIMITED
+      category: NSPD
+      legal_name: MORGAN STANLEY AUSTRALIA SECURITIES LIMITED
+      country: AU
+    - mic: MSPL
+      operating_mic: MSCO
+      segment: SGMT
+      market: MS POOL
+      category: ATSS
+      legal_name: MORGAN STANLEY AND CO. LLC
+      country: US
+    - mic: MSCO
+      operating_mic: MSCO
+      segment: OPRT
+      market: MORGAN STANLEY AND CO. LLC
+      category: OTHR
+      legal_name: MORGAN STANLEY AND CO. LLC
+      country: US
+    - mic: MSTX
+      operating_mic: MSCO
+      segment: SGMT
+      market: MS TRAJECTORY CROSS
+      category: ATSS
+      legal_name: MORGAN STANLEY AND CO. LLC
+      country: US
+    - mic: MSIP
+      operating_mic: MSIP
+      segment: OPRT
+      market: MORGAN STANLEY AND CO. INTERNATIONAL PLC
+      category: NSPD
+      legal_name: ''
+      country: GB
+    - mic: MSLC
+      operating_mic: MSCO
+      segment: SGMT
+      market: MS LONG CROSS
+      category: ATSS
+      legal_name: MORGAN STANLEY AND CO. LLC
+      country: US
+    - mic: MSAB
+      operating_mic: MSCO
+      segment: SGMT
+      market: MORGAN STANLEY CLOSING CROSS
+      category: ATSS
+      legal_name: MORGAN STANLEY AND CO. LLC
+      country: US
+    detected_by: sweep-capital-markets.py
+    detected: '2026-10-15'
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-15'
+generated: '2026-10-15'
+method: searched
+checked:
+- https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
