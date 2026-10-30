@@ -1,4 +1,4 @@
-# Morgan Stanley (morgan-stanley)
+# Morgan Stanley
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,44 +64,114 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Morgan Stanley is a global financial services firm that offers a wide range of services to individuals, corporations, and governments. The firm is known for its investment banking and wealth management services, helping clients raise capital, make strategic acquisitions, and manage their assets. Morgan Stanley also provides services in areas such as asset management, trading, research, and risk management. With a focus on innovation and client-centric solutions, Morgan Stanley has built a reputation as a leader in the financial services industry.
+Morgan Stanley is a global financial services firm that offers a wide range of services to individuals, corporations, and governments. The firm is known for its investment banking and wealth management services, helping clients raise capital, make strategic acquisitions, and manage their assets. Morgan Stanley also provides services in areas such as asset management, trading, research, and risk management. Its public developer surface is split between an invitation-only institutional API Platform at developer.morganstanley.com (OAuth 2.0 with certificate-based token exchange, REST and WebSocket, built to the OpenAPI Specification) and the genuinely public E*TRADE from Morgan Stanley brokerage API at developer.etrade.com (OAuth 1.0a, REST, with a sandbox).
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/morgan-stanley/refs/heads/main/apis.yml)
+**Areas:** Finance · Investment Banking · Wealth Management · Brokerage · Market Data · Trading · Fortune 100 · United States
 
-## Scope
+## Morgan Stanley on APIs.io
 
-- **Type:** Index 
-- **Position:** Consumer 
-- **Access:** 3rd-Party 
+Everything profiled for Morgan Stanley is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/morgan-stanley/](https://apis.io/providers/morgan-stanley/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (6)
 
- - Financial, Wealth Management, Investment Banking
+- [Morgan Stanley API Platform (REST)](https://apis.io/apis/morgan-stanley/api-platform-rest/) — The institutional REST APIs on the Morgan Stanley API Platform let onboarded clients and third-party partners integrate Morgan Stanley data and services…
+- [Morgan Stanley API Platform (WebSocket Streaming)](https://apis.io/apis/morgan-stanley/api-platform-websocket/) — Alongside its REST APIs, the Morgan Stanley API Platform exposes streaming WebSocket APIs for onboarded institutional clients who need low-latency,…
+- [E*TRADE from Morgan Stanley - Accounts API](https://apis.io/apis/morgan-stanley/etrade-accounts/) — E*TRADE from Morgan Stanley operates a genuinely public, self-service developer platform whose REST Accounts API gives an authenticated E*TRADE user's…
+- [E*TRADE from Morgan Stanley - Market Data API](https://apis.io/apis/morgan-stanley/etrade-market-data/) — The E*TRADE from Morgan Stanley Market Data API is the market-data module of the public E*TRADE V1 REST platform. It provides real-time and delayed equity…
+- [E*TRADE from Morgan Stanley - Order API](https://apis.io/apis/morgan-stanley/etrade-orders/) — The E*TRADE from Morgan Stanley Order API is the trading module of the public E*TRADE V1 REST platform, letting an authorized application list an account's…
+- [E*TRADE from Morgan Stanley - Alerts API](https://apis.io/apis/morgan-stanley/etrade-alerts/) — The E*TRADE from Morgan Stanley Alerts API is the notifications module of the public E*TRADE V1 REST platform. It lets an authorized application list the…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-03-01 
-- **Modified:** 2026-04-28 
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (3)
 
-### Morgan Stanley API
-The Morgan Stanley API provides developers with a suite of tools and resources to easily integrate their systems with Morgan Stanley's financial services and products. This API allows for seamless communication between third-party applications and Morgan Stanley's core systems, enabling clients to access real-time market data, manage their investment portfolios, execute trades, and perform various other financial transactions. By leveraging the Morgan Stanley API, developers can create custom solutions that streamline and enhance the overall user experience, ultimately empowering clients to make more informed decisions and achieve their financial goals.
+Authentication, trust centre, and vulnerability disclosure.
 
-**Human URL:** [https://developer.morganstanley.com/](https://developer.morganstanley.com/)
+- [Morgan Stanley Authentication](https://apis.io/security/morgan-stanley/morgan-stanley-authentication/)
+- [Morgan Stanley Domain Security](https://apis.io/security/morgan-stanley/morgan-stanley-domain-security/)
+- [Morgan Stanley Vulnerability Disclosure](https://apis.io/security/morgan-stanley/morgan-stanley-vulnerability-disclosure/)
 
+#### Plans and pricing (1)
 
-#### Tags:
+Published plans, tiers and prices.
 
- - Financial, Wealth Management, Investment Banking
+- [Morgan Stanley Plans Pricing](https://apis.io/plans/morgan-stanley/morgan-stanley-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://developer.morganstanley.com/)
+Published request limits.
 
-## Maintainers
+- [Morgan Stanley Rate Limits](https://apis.io/rate-limits/morgan-stanley/morgan-stanley-rate-limits/)
 
-**FN:** Kin Lane
+#### FinOps (1)
 
-**Email:** info@apievangelist.com
+What the API costs to run, by operation.
 
+- [Morgan Stanley Finops](https://apis.io/finops/morgan-stanley/morgan-stanley-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.morganstanley.com/)
+- [Documentation](https://developer.morganstanley.com/apis)
+- [Getting started](https://developer.etrade.com/getting-started)
+- [Blog](https://morganstanley.github.io/)
+- [Security](https://www.morganstanley.com/vulnerability-disclosure)
+- [Terms of service](https://developer.morganstanley.com/terms)
+- [GitHub](https://github.com/morganstanley)
+
+## API Evangelist rating
+
+**Kin Score 26.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 15.8 |
+
+**Agent readiness 9.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 30.6** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/morgan-stanley/](https://apis.io/providers/morgan-stanley/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Morgan Stanley: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/morgan-stanley/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
