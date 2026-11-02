@@ -1,0 +1,96 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Morgan Stanley
+providerId: morgan-stanley
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Financial
+  - Investment Banking
+  - Wealth Management
+description: Morgan Stanley operates a private institutional developer portal at developer.morganstanley.com.
+  Access is invitation-only and is offered to existing institutional clients and contracted third-party
+  partners; pricing is bundled into the underlying client services agreement (e.g. Wealth Management,
+  Institutional Securities, Morgan Stanley at Work). No public list pricing is published.
+sources:
+  - https://developer.morganstanley.com/
+  - https://developer.morganstanley.com/terms
+  - https://developer.morganstanley.com/apis
+notes: Pricing not publicly disclosed; reconciliation set to false. Captures institutional / partner-private
+  access model verified via developer.morganstanley.com landing page.
+plans:
+  - id: morgan-stanley-institutional
+    name: Institutional Client API Access
+    type: enterprise
+    description: API access bundled with an existing Morgan Stanley institutional client relationship
+      (Wealth Management, Institutional Securities, Investment Management, Morgan Stanley at Work). Requires
+      coordination with the client service representative to onboard and obtain credentials.
+    entries:
+      - label: Bundled with client agreement
+        name: bundled_access
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: year
+        geo: configurable
+        unit: 1
+        price: bundled with client services agreement
+        userMultiplied: false
+    elements:
+      - name: Real-time market data access (entitlements apply)
+      - name: Portfolio management endpoints
+      - name: Trade execution endpoints
+      - name: Wealth-management data feeds
+      - name: REST and WebSocket APIs
+  - id: morgan-stanley-partner
+    name: Third-Party Partner Integration
+    type: enterprise
+    description: Integration partners (e.g. equity-compensation platforms via Morgan Stanley at Work) onboard
+      under a partner agreement. Commercial terms are negotiated bilaterally.
+    entries:
+      - label: Partner integration
+        name: partner_access
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: year
+        geo: configurable
+        unit: 1
+        price: contact partnerships
+        userMultiplied: false
+    elements:
+      - name: Partner-scoped API credentials
+      - name: Code samples and starter projects (github.com/morganstanley/api)
+      - name: Sandbox endpoints
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: Institutional Client API Access
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
+  - name: Third-Party Partner Integration
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
