@@ -25,17 +25,22 @@ deliveryModel:
   generated: '2026-08-28'
   method: derived
 accessModel:
-  pricing: unknown
-  onboarding: sales
+  pricing: enterprise
+  onboarding: self-serve
   trial: false
   try_now: false
   public: false
-  label: Invitation-only institutional platform + public E*TRADE brokerage API
-  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Enterprise · Self-serve signup
+  confidence: high
   source:
   - plans
   - authentication
-  generated: '2026-07-23'
+  - security
+  - sandbox
+  generated: '2026-11-02'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/morgan-stanley.png
 tags:
